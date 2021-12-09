@@ -43,7 +43,7 @@ const AuthProvider: React.FC = ({ children }) => {
     });
 
     setCookie(undefined, "next-auth.token", token, {
-      maxAge: 60 * 60 * 24, 
+      maxAge: 60 * 60 * 24,
     });
 
     api.defaults.headers["Authorization"];
@@ -64,7 +64,7 @@ const useAuth = () => {
   const context = useContext(AuthContext);
 
   if (!context) {
-    throw new Error("useAuth must be provided");
+    throw new Error("useAuth must be provided!!");
   }
 
   return context;
